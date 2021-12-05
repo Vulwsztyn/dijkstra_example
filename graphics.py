@@ -208,7 +208,7 @@ class GraphWin(tk.Canvas):
     """A GraphWin is a toplevel window for displaying graphics."""
 
     def __init__(self, title="Graphics Window",
-                 width=200, height=200, autoflush=True):
+                 width=100, height=100, autoflush=True):
         assert type(title) == type(""), "Title must be a string"
         master = tk.Toplevel(_root)
         master.protocol("WM_DELETE_WINDOW", self.close)

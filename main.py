@@ -54,6 +54,8 @@ def main():
     view = LocView(env)
 
     # create the agent
+    view.update(env, [])
+    update(rate)
     agent = Agent(env.size, env.walls, env.agentLoc, env.agentDir, goal)
     t = 0.0
     while env.agentLoc != goal:
@@ -69,7 +71,7 @@ def main():
         view.update(env, path)
         update(rate)
         # uncomment to pause before action
-        view.pause()
+        # view.pause()
 
         action_cost = env.doAction(action)
 
